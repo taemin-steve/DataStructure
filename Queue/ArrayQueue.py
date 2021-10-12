@@ -1,4 +1,4 @@
-class ArrayQueue:
+class ArrayQueue: # 작은 인덱스에서 부터 채워지고, 마지막에서 뺀다. 단, 여기서는 시작지점을 계속 순환시켜줌.
     DEFAULT_CAPACITY = 10
 
     def __init__(self):
