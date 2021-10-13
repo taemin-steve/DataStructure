@@ -1,4 +1,4 @@
-class LinkedList: #LinkedListd의 장점은 worst case 에서도 O(1)의 성늘을 보일 수 있다는 것이다. 
+class LinkedList: #LinkedList의 장점은 worst case 에서도 O(1)의 성늘을 보일 수 있다는 것이다. 
 #------------------------------------------Node---------------------------------------------------------
     class _Node:
         __slots__ = '_element', '_next'
