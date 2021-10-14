@@ -24,12 +24,12 @@ class LinkedList: #LinkedList의 장점은 worst case 에서도 O(1)의 성늘�
     
     def top(self):
         if self.is_empty():
-            raise Empty('stack is empty')
+            raise EOFError('stack is empty')
         return self._head._element
 
     def pop(self): # Head에 있는 값을 꺼냄
         if self.is_empty():
-            raise Empty('stack is empty')
+            raise EOFError('stack is empty')
         answer = self._head._element
         self._head = self._head._next
         self._size -= 1

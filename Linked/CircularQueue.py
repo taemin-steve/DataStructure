@@ -2,7 +2,7 @@ class CircularQueue:
 
     class _Node:
         __slots__ = '_element','_next'
-        def __intit__(self, element, next):
+        def __init__(self, element, next):
             self._element = element
             self._next = next
         
@@ -18,13 +18,13 @@ class CircularQueue:
 
     def first(self):
         if self.is_empty():
-            raise Empty('비었습니다')
+            raise IndexError('비었습니다')
         head = self._tail._next
         return head._element
     
     def dequeue(self):
         if self.is_empty():
-            raise Empty('비었습니다')
+            raise EOFError('비었습니다')
         oldhead = self._tail._next
         if self._size == 1:
             self._tail._next = None
