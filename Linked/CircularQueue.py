@@ -32,7 +32,16 @@ class CircularQueue:
             self._tail._next = oldhead._next
         self._size -= 1
         return oldhead._element
-    
+
+    def _enqueue(self, e):
+        newest = self._Node(e,None)
+        if self.is_empty():
+            newest._next = newest
+        else:
+            newest._next = self._tail._next
+        self._tail = newest
+        self._size += 1
+        
     def rotate(self):
         if self._size > 0:
             self._tail = self._tail._next

@@ -21,13 +21,13 @@ class LinkedQueue: # 먼저들어간 것은 head에 나중에 들어간것은 ta
 
     def first(self):
         if self.is_empty():
-            raise Empty("비어있어요")
+            raise EOFError("비어있어요")
         return self._head._element
 
     def dequeue(self): 
         #가장 먼저 들어간거 삭제. == 먼저들어간 것은 head에 존재. head 부터 삭제 하게된다. 
         if self.is_empty():
-            raise Empty("비어있어요")
+            raise EOFError("비어있어요")
         answer = self._head._element
         self._head = self._head._next
         self._size -= 1
