@@ -1,4 +1,3 @@
-from typing import Container
 from BinaryTree import BinaryTree
 
 class LinkedBinaryTree(BinaryTree):
@@ -15,7 +14,7 @@ class LinkedBinaryTree(BinaryTree):
     class Position(BinaryTree.Position):
 
         def __init__(self,container,node):
-            self._container = Container
+            self._container = container
             self._node = node
 
         def element(self):
@@ -54,7 +53,7 @@ class LinkedBinaryTree(BinaryTree):
         node = self._validate(p)
         return self._make_position(node._left)
     
-     def right(self,p):
+    def right(self,p):
         node = self._validate(p)
         return self._make_position(node._right)
 
